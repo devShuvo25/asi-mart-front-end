@@ -10,10 +10,11 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select";
+import CategoriesDropdown from "../dropdown/categoriesDropdown";
 
 export default function Navbar() {
   return (
-    <header className="w-full border-b bg-white">
+    <header className="fixed z-50 w-full border-b bg-white">
       {/* Top bar */}
       <div className="flex items-center justify-between px-6 py-3">
         {/* Logo */}
@@ -61,11 +62,11 @@ export default function Navbar() {
       {/* Bottom bar */}
       <div className="flex items-center justify-between bg-blue-50 px-6 py-2">
         {/* Categories */}
-        <Button className="gap-2 bg-primary text-white">
-          <Menu className="h-4 w-4" />
-          Browse Categories
-          <ChevronDown className="h-4 w-4" />
-        </Button>
+        
+            <div>
+                <CategoriesDropdown/>
+            </div>
+    
 
         {/* Icons */}
         <div className="flex items-center gap-6">
