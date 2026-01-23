@@ -26,8 +26,7 @@ product
           <Image
             src={image}
             alt={title}
-            width={100}
-            height={100}
+            fill
             className="h-4/5 w-4/5 object-contain mix-blend-multiply"
           />
         </div>
