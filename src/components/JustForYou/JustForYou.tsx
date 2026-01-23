@@ -5,11 +5,11 @@ import { MoveRight } from "lucide-react";
 
 const JustForYou = () => {
   return (
-    <div className="p-5">
+    <div className="container mx-auto px-4 py-8">
       {/* header */}
-      <div className=" flex items-center justify-between">
+      <div className="flex items-center justify-between mb-8">
         <div className="relative">
-          <h2 className="text-3xl font-bold text-[#222222]">Just For You</h2>
+          <h2 className="text-2xl md:text-3xl font-bold text-[#222222]">Just For You</h2>
           <div className="mt-1 h-1 w-24 rounded-full bg-orange-400"></div>{" "}
           {/* Decorative underline */}
         </div>
@@ -20,7 +20,7 @@ const JustForYou = () => {
           </div>
         </button>
       </div>
-      <div className="flex items-center">
+      <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
         {products
           .sort((a, b) => b.rating - a.rating)
           .slice(0, 4)
