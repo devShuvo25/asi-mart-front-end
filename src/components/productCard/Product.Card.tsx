@@ -12,7 +12,7 @@ product
 }: ProductCardProps) {
   const {title,image,discountAmount,currentPrice,originalPrice,rating,reviewsCount}  = product || {}
   return (
-    <Card className="w-full max-w-[350px] overflow-hidden rounded-3xl border-none shadow-lg">
+    <Card className="w-full max-w-[350px] overflow-hidden rounded-3xl border-none shadow-lg flex flex-col justify-between">
       <CardContent className="p-4">
         {/* Image Container */}
         <div className="relative aspect-[4/5] w-full overflow-hidden rounded-2xl bg-[#F3F4F6] flex items-center justify-center">
