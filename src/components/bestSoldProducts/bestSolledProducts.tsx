@@ -5,10 +5,10 @@ import BestSoldProduct from "./card/BestSoldProductCard";
 
 const BestSoldProducts = () => {
   return (
-    <div>
+    <div className="container mx-auto px-4 py-8">
       <div className="mb-8 flex items-center justify-between">
         <div className="relative">
-          <h2 className="text-3xl font-bold text-[#222222]">
+          <h2 className="text-2xl md:text-3xl font-bold text-[#222222]">
             Our Best Selling Products
           </h2>
           <div className="mt-1 h-1 w-24 rounded-full bg-orange-400"></div>{" "}
@@ -21,11 +21,11 @@ const BestSoldProducts = () => {
           </div>
         </button>
       </div>
-     <div className="flex items-center justify-between gap-10">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
          {products.slice(0, 3).map((product) => (
         <BestSoldProduct key={product.id} product={product} />
       ))}
-     </div>
+      </div>
     </div>
   );
 };

@@ -5,10 +5,10 @@ import React from "react";
 
 const TopBrand = () => {
   return (
-    <div>
-      <div className="py-5 flex items-center justify-between">
+    <div className="container mx-auto px-4 py-8">
+      <div className="mb-8 flex items-center justify-between">
         <div className="relative">
-          <h2 className="text-3xl font-bold text-[#222222]">
+          <h2 className="text-2xl md:text-3xl font-bold text-[#222222]">
             Top Brands
           </h2>
           <div className="mt-1 h-1 w-24 rounded-full bg-orange-400"></div>{" "}
@@ -22,16 +22,16 @@ const TopBrand = () => {
         </button>
       </div>
       
-   <div className="grid grid-cols-6 gap-3">
-     {brands.map((brand) => {
-        return (
-          <div key={brand.id}
-           className="border border-gray-300 p-3 flex items-center justify-center rounded-xl">
-            <Image src={brand.icon} alt={brand.title} width={40} height={40} />
-          </div>
-        );
-      })}
-   </div>
+      <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4">
+        {brands.map((brand) => {
+          return (
+            <div key={brand.id}
+              className="border border-gray-100 p-6 flex items-center justify-center rounded-xl bg-white shadow-sm hover:shadow-md transition-shadow">
+              <Image src={brand.icon} alt={brand.title} width={60} height={60} className=" hover:grayscale-0 transition-all opacity-70 hover:opacity-100" />
+            </div>
+          );
+        })}
+      </div>
     </div>
   );
 };
