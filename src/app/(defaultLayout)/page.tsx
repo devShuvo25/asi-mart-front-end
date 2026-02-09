@@ -1,14 +1,14 @@
 "use client";
-import BestSoldProducts from "@/components/bestSoldProducts/bestSolledProducts";
-import Brand from "@/components/brand/Brand";
-import Categories from "@/components/categories/Categories";
-import FashionBanner from "@/components/hero/Hero";
-import JustForYou from "@/components/JustForYou/JustForYou";
-import NewsLetterBanner from "@/components/newslater/newsLetterBanner";
+import FashionBanner from "@/components/home/hero/Hero";
+import JustForYou from "@/components/home/JustForYou/JustForYou";
+import NewsLetterBanner from "@/components/home/newslater/newsLetterBanner";
 import Products from "@/components/Products/Products";
-import Slider from "@/components/swiper/swiperSlide";
-import TopBrand from "@/components/topBrand/TopBrand";
+import Slider from "@/components/ui/swiperSlide";
+import TopBrand from "@/components/home/topBrand/TopBrand";
 import React from "react";
+import Categories from "@/components/home/categories/Categories";
+import BestSoldProducts from "@/components/home/bestSoldProducts/bestSolledProducts";
+import Brand from "@/components/home/brand/Brand";
 
 const Home = () => {
   return (
@@ -16,12 +16,12 @@ const Home = () => {
       <FashionBanner />
       <Slider />
       <Products />
-      <Categories/>
-      <Brand/>
-      <BestSoldProducts/>
-      <JustForYou/>
-      <TopBrand/>
-      <NewsLetterBanner/>
+      <Categories />
+      <Brand />
+      <BestSoldProducts />
+      <JustForYou />
+      <TopBrand />
+      <NewsLetterBanner />
     </div>
   );
 };
