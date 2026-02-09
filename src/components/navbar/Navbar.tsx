@@ -1,6 +1,6 @@
 "use client";
 
-import { Search, Phone, User, ShoppingCart, Heart, ChevronDown, Menu } from "lucide-react";
+import { Search, Phone, User, ShoppingCart, Heart} from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import {
@@ -14,7 +14,7 @@ import CategoriesDropdown from "../dropdown/categoriesDropdown";
 
 export default function Navbar() {
   return (
-    <header className="fixed z-50 w-full border-b bg-white">
+    <header className="fixed z-50 w-full border-b bg-white shadow-sm">
       {/* Top bar */}
       <div className="flex items-center justify-between px-6 py-3">
         {/* Logo */}
@@ -24,12 +24,12 @@ export default function Navbar() {
         </div>
 
         {/* Search */}
-        <div className="flex w-1/2 max-w-xl">
+        <div className=" relative flex w-1/2 max-w-xl items-center">
           <Input
             placeholder="Search your product..."
-            className="rounded-r-none py-0.5 focus:outline-0"
+            className=" py-0.5 focus:outline-0"
           />
-          <Button className=" bg-accent text-white " variant="default">
+          <Button className="cursor-pointer absolute right-1 bg-accent text-white " variant="default">
             <Search className="mr-1 h-4 w-4" /> Search
           </Button>
         </div>
@@ -48,7 +48,7 @@ export default function Navbar() {
           </div>
 
           <Select defaultValue="en">
-            <SelectTrigger className="w-[110px]">
+            <SelectTrigger className="w-27.5">
               <SelectValue placeholder="Language" />
             </SelectTrigger>
             <SelectContent>
